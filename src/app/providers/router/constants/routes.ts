@@ -1,4 +1,4 @@
-const ROUTES = {
+export const ROUTES = {
     app: {
         route: '/',
     },
@@ -33,6 +33,8 @@ const ROUTES = {
             page: '/auth/register'
         }
     },
-
+    page_not_fount: {
+        route: '/*',
+    }
 
 }
