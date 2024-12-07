@@ -1,14 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
-import { App } from "../../../App";
 import { AuthRoute } from "../ui/AuthRoute";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
+import { ShopPage } from "../../../../pages/ShopPage/ShopPage";
 
-const router = createBrowserRouter([
+
+export const router = createBrowserRouter([
     {
         path: ROUTES.app.route,
         element: (
             <AuthRoute >
-                <App />
+                <MainLayout />
             </AuthRoute>
         ),
+        children: [
+            {
+                index: true,
+                element: <ShopPage />
+            }
+        ]
     }
 ])

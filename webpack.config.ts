@@ -69,7 +69,7 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, 'build'),
     compress: true,
-    port: 3008,
+    port: 3017,
     hot: true,
     open: true 
   },
