@@ -24,8 +24,10 @@ export const ROUTES = {
     },
 
     auth: {
+        path: '/auth',
+        
         login: {
-            route: 'login',
+            route: '',
             page: '/auth/login'
         },
         register: {
@@ -34,7 +36,7 @@ export const ROUTES = {
         }
     },
     page_not_fount: {
-        route: '/*',
+        route: '*',
     }
 
 }

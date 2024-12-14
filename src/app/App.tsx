@@ -1,22 +1,16 @@
-import { Button, IconButton, ThemeProvider, Typography, createTheme } from "@mui/material"
 import { RouterProvider } from "react-router-dom";
 import { router } from "./providers/router/config/routeConfig";
+import { Provider } from "react-redux";
+import { store } from "./providers/store/config/store";
 
-const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#1976d2', // Цвет для primary
-      },
-      secondary: {
-        main: '#ff4081', // Цвет для secondary
-      },
-    },
-  });
+import './styles/App.css'
 
 export const App: React.FC = () => {
     return(
-        <ThemeProvider theme={theme}>
-          <RouterProvider router={router} />
-        </ThemeProvider>
+      <div className="wrapper">
+          <Provider store={store}>
+            <RouterProvider router={router} />
+          </Provider>
+      </div>
     )
 }
